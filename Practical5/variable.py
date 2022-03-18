@@ -17,3 +17,7 @@ x = True
 y = False
 w =Boolean(x and y)
 print (w)
+x= "I am"
+y= "a student"
+M = x+y
+print (M)
