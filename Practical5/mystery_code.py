@@ -13,6 +13,6 @@ from math import ceil
 progress=0
 while progress<10:
 	progress+=1
-	n = randint(1,100)
+	n = randint(1,100)# give a random number
 
-print(n)
+print(n)# show the result
