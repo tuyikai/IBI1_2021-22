@@ -1,0 +1,3 @@
+ I am interested in the question that with time going by the data of China new deaths number 
+I answer this at line 70 to 74
+I show a subplot and I think I achieve the goal I want 
