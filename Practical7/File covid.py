@@ -2,6 +2,7 @@ from operator import truediv
 import os
 from pickle import TRUE
 from sqlite3 import Row
+from statistics import mean
 from tkinter import Y
 import turtle
 from xmlrpc.client import boolean
@@ -49,6 +50,7 @@ a = covid_data[['date','location','new_cases','new_deaths']]# choose the row we 
 china_new_data =  a[a['location']=='China']  # select the location is China
 china_new_data_re = china_new_data[china_new_data.notnull()]
 print(china_new_data)# show the data
+print(china_new_data.describe())# it will show the mean value of new cases and new deaths
 plt.figure("4 subplot")# it can name the figure title
 plt.subplot(221)
 plt.boxplot(china_new_data_re[["new_cases"]],showfliers=False)# this graph is about new cases
