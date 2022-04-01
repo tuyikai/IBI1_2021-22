@@ -52,11 +52,11 @@ china_new_data_re = china_new_data[china_new_data.notnull()]
 print(china_new_data)# show the data
 print(china_new_data.describe())# it will show the mean value of new cases and new deaths
 plt.figure("4 subplot")# it can name the figure title
-plt.subplot(221)
+plt.subplot(231)
 plt.boxplot(china_new_data_re[["new_cases"]],showfliers=False)# this graph is about new cases
 plt.title("China new cases")
 
-plt.subplot(222)
+plt.subplot(232)
 plt.boxplot(china_new_data_re[["new_deaths"]],showfliers=False)# this graph is about new  deaths
 plt.title("China new deaths")
 
@@ -64,13 +64,19 @@ plt.title("China new deaths")
 china_dates = china_new_data["date"]
 china_new_cases = china_new_data['new_cases']# it give a defination
 china_new_deaths = china_new_data['new_deaths']
-plt.subplot(223)
+plt.subplot(233)
 plt.plot(china_dates, china_new_cases, 'b+')#b+, 'r+' or 'bo are different kinds of the plot (b is blue means colour + is the size)
 plt.xticks(china_dates.iloc[0:len(china_dates):4],rotation=-90)# it will provide x-axis site and rotation is showed the angle
 plt.title("China new cases with time going by")
 
-plt.subplot(224)
+plt.subplot(234)
 plt.plot(china_dates,china_new_deaths,'r+')
-plt.xticks(china_dates.iloc[0:len(china_dates):4],rotation=90)
+plt.xticks(china_dates.iloc[0:len(china_dates):4],rotation=90)#it design the xticks
 plt.title('China new deaths with time going by')
+
+covid_data.loc[0:81,"total_cases"]
+plt.subplot(235)#in a 2*3 space
+plt.plot(covid_data.loc[0:81,"date"],covid_data.loc[0:81,'total_cases'],'r+')# it define x and y
+plt.xticks(covid_data.loc[0:81,"date"].iloc[0:len(covid_data.loc[0:81,"date"]):4],rotation=-90)
+plt.title("afghanistan covid total cases")# it will give a title
 plt.show()# show the boxplot
