@@ -1,6 +1,6 @@
 import re,os
-a = open('./Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa')# open the file
-b = open('./cut_genes.fa','w')# create a new file to restore the code
+a = open('F:\Python\Practical8\Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa')# open the file
+b = open('F:\Python\Practical8\Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa','w')# create a new file to restore the code
 seq = a.read()# make use of the code
 pattern = re.compile('(.*?)_.*?Acc:.*?](.*?)>',re.S)# find pattern of the code
 seq_list = pattern.findall(seq)
