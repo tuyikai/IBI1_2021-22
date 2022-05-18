@@ -14,8 +14,8 @@ for id in ids:
 terms = collection.getElementsByTagName('term')#print(type(names))
 for term in terms:
     m +=1
-    for i in range(len(terms)):              #循坏读取列表中的内容跟
-     print(terms[i].firstChild.data)      #打印节点数据
-     print(terms[i].getAttribute('is_a'))#show the result
+for i in range(len(ids)): 
+    print(ids[i].firstChild.data)             #循坏读取列表中的内容跟    #打印节点数据
+    print(ids[i].getAttribute('is_a'))#show the result
 print('the number of term is ',m)
 print('the number of id is',n)
