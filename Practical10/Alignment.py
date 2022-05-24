@@ -2,25 +2,25 @@ seq_human = "MTGVFDRRVPSIRSGDFQAPFQTSAAMHHPSQESPTLPESSATDSDYYSPTGGAPHGYCSPTSASYG
 seq_mouse = "MTGVFDRRVPSIRSGDFQAPFPTSAAMHHPSQESPTLPESSATDSDYYSPAGAAPHGYCSPTSASYGKALNPYQYQYHGVNGSAAGYPAKAYADYGYASPYHQYGGAYNRVPSATSQPEKEVAEPEVRMVNGKPKKVRKPRTIYSSFQLAALQRRFQKTQYLALPERAELAASLGLTQTQVKIWFQNKRSKIKKIMKNGEMPPEHSPSSSDPMACNSPQSPAVWEPQGSSRSLSHHPHAHPPTSNQSPASSYLENSASWYPSAASSINSHLPPPGSLQHPLALASGTLY"
 seq_random = "GDYHNIYEMQSTDNDVIIVLCESYWQNRYWCGYKQNCIFEDSSLFAPSEVDWAVNGYPPYRAVNMHKYEYDYATPTPQKMMWWHLPIWSWHFWGWNIRTWDILTNSGNTMGFCYCAWVCNLPCMILCHARFAFSTDKKPFSVHTFIIKICHTQPALAVTEPNADSCCMIFPLIGKSYCHTCGTWDFYPNEVKYQFNFSAATQYENVIYIFHHICQDVRRGCTDIELNHFWMSHHVANRKLENIVGYRAILRFIGSKCAQNMRSLFAHPWQSFQDHKEYDWHGNLGLNWP"
 edit_distance = 0
-for i in range(len(seq_human)):
-    if seq_human[i] != seq_mouse[i]:       
+for a in range(len(seq_human)):
+    if seq_human[a] != seq_mouse[a]:       
         edit_distance += 1
 print(edit_distance)
 edit_distance = 0
-for i in range(len(seq_human)):
-    if seq_human[i] != seq_random[i]:       
+for a in range(len(seq_human)):
+    if seq_human[a] != seq_random[a]:       
         edit_distance += 1
 print(edit_distance)
 edit_distance = 0
-for i in range(len(seq_mouse)):
-    if seq_mouse[i] != seq_random[i]:       
-        edit_distance += 1
+for a in range(len(seq_mouse)):
+    if seq_mouse[a] != seq_random[a]:       
+        edit_distance += 1# we can use this to memory some important information
 print(edit_distance)
 
 
 
-# comparing the edit distance, we can find that the distance between human and mouse is 10, while human to random and 
-# mouse to random are 281 and 280 respectively, so human and mouse are very similar comparing to the random.
+#  we compare the edit distance and find that the distance between human and mouse is only 10, while human to random and 
+#  so human and mouse are very similar comparing to the random.
 # meanwhile, i also write a local alignment program, the results between human and mouse are like below:
 '''
 MTGVFDRRVPSIRSGDFQAPFQTSAAMHHPSQESPTLPESSATDSDYYSPTGGAPHGYCSPTSASYGKALNPYQYQYHGVNGS-AGSYPAKAYADYSYASSYHQYGGAYNRVPSATNQPEKEVTEPEVRMVNGKPKKVRKPRTIYSSFQLAALQRRFQKTQYLALPERAELAASLGLTQTQVKIWFQNKRSKIKKIMKNGEMPPEHSPSSSDPMACNSPQSPAVWEPQGSSRSLSHHPHAHPPTSNQSPASSYLENSASWYTSAASSINSHLPPPGSLQHPLALASGTLY
