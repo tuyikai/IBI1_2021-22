@@ -12,4 +12,4 @@ while e <= 64:
     d=a+b+c  
     e=d/2#use the definition in the while process
            
-print("it needs at least",n,"cut")#it show the result
+print("it needs at least",n,"cut")#it show the result(print( what you want to show ))
